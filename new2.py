@@ -1,4 +1,5 @@
-# import module
+# reference
+
 import subprocess
 
 # traverse the software list
