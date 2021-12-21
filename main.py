@@ -2,7 +2,14 @@ import os
 import pandas as pd
 import datetime as dt
 import schedule
-import time
+# import time
+
+
+def clear_console():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
 
 
 def main():
@@ -41,7 +48,7 @@ def main():
         converted_time = str(conversion)
         app_time_df["Time"][i] = converted_time
 
-    print()
+    clear_console()
     print(app_time_df.to_markdown())
 
 
